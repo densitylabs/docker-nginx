@@ -12,6 +12,7 @@ RUN sed -i -e '/http {/a client_max_body_size 100M;' /etc/nginx/nginx.conf
 VOLUME /var/log/nginx
 EXPOSE 80
 
+RUN rm /etc/nginx/sites-enabled/*
 VOLUME /etc/nginx/sites-enabled
 
 ADD *.sh /
