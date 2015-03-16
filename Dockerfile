@@ -13,7 +13,7 @@ VOLUME /var/log/nginx
 EXPOSE 80
 
 RUN rm /etc/nginx/sites-enabled/*
-VOLUME /etc/nginx/sites-enabled
+VOLUME /etc/nginx/sites-template/
 
 ADD *.sh /
 RUN chmod +x /*.sh
