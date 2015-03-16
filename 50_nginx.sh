@@ -1,7 +1,11 @@
 #!/bin/bash
 
 echo 'showing nginx log'
-tail -f /var/log/nginx/error.log &
+mkdir -p /var/log/nginx/
+tail --follow=name --retry /var/log/nginx/error.log &
+
+echo 'testing configuration'
+nginx -t
 
 echo 'running nginx'
 nginx
