@@ -8,7 +8,7 @@ You can run this image with:
 docker run -d -p 80:80 -v sites/:/sites nginx
 ```
 
-Where `sites/conf.d/*.conf` should have nginx config files.
+Where `sites/*.conf` should have nginx config files.
 
 # Sites template
 
@@ -18,7 +18,7 @@ Also you need to escape any `$` character with `\$`
 
 # config examples
 
-This is an example of a static website in `sites/conf.d/default.conf`
+This is an example of a static website in `sites/default.conf`
 
 ```
 server {

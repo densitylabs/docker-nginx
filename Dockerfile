@@ -19,7 +19,6 @@ VOLUME /var/log/nginx
 VOLUME /sites
 
 RUN mkdir -p /var/log/nginx/
-RUN mkdir -p /var/log/nginx/
 
 ADD *.sh /
 RUN chmod +x /*.sh

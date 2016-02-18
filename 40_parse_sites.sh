@@ -9,7 +9,7 @@ render_template() {
   eval "echo \"$(cat $1)\""
 }
 
-for f in /sites/conf.d/*.conf; do
+for f in /sites/*.conf; do
   if [[ $VERBOSE_TEMPLATES != "" ]]; then
     echo "rendering template $f"
     render_template $f
