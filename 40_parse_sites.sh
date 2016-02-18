@@ -9,10 +9,10 @@ render_template() {
   eval "echo \"$(cat $1)\""
 }
 
-for f in /etc/nginx/sites-template/*.conf; do 
+for f in /sites/conf.d/*.conf; do
   if [[ $VERBOSE_TEMPLATES != "" ]]; then
     echo "rendering template $f"
     render_template $f
   fi
-  render_template $f > /etc/nginx/sites-enabled/$(basename $f)
+  render_template $f > etc/nginx/conf.d/$(basename $f)
 done

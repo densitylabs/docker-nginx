@@ -9,4 +9,3 @@ nginx -t
 
 echo 'running nginx'
 nginx
-
