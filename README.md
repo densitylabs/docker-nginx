@@ -26,7 +26,7 @@ server {
     server_name  $NGINX_HOST;
 
     location / {
-        root   /sites/default/
+        root   /sites/default/;
         index  index.html index.htm;
     }
 
