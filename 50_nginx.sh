@@ -7,5 +7,10 @@ tail --follow=name --retry /var/log/nginx/error.log &
 echo 'testing configuration'
 nginx -t
 
+
+function finish {
+    nginx -s stop
+}
+trap finish EXIT
 echo 'running nginx'
 nginx

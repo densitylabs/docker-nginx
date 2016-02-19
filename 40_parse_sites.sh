@@ -9,6 +9,8 @@ render_template() {
   eval "echo \"$(cat $1)\""
 }
 
+rm etc/nginx/conf.d/*
+
 for f in /sites/*.conf; do
   if [[ $VERBOSE_TEMPLATES != "" ]]; then
     echo "rendering template $f"
